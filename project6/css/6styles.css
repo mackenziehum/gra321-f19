@@ -36,7 +36,7 @@ body {
     width:100%;
     }
 .charlies {
-    font-size:30px;
+    font-size:40px;
     position:relative;
     text-align:center;
     }
@@ -86,6 +86,35 @@ h5 {
 .info {
     padding:0.01em 16px;
     }
+.info h5 {
+    margin: 0;
+}
+.info p {
+    margin: 0;
+}
+.large {
+    background: inherit;
+    grid-area: l;
+    }
+li {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas: 
+    "product product product product"
+    "s m l .";
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    width: 90%;
+    }
+@media screen and (min-width: 300px) {
+    li {
+        grid-template-areas:
+        "product s m l";
+        }
+    }
+.medium {
+    background: inherit;
+    grid-area: m;
+    }
 .open {
     background-color:rgba(0,0,0,0);
     display:none;
@@ -98,11 +127,25 @@ h5 {
     width:100%;
     z-index:3;
     }
+p {
+    font-size:18px;
+    font-weight:600;
+    margin:10px;
+    }
+.product {
+    background: inherit;
+    grid-area: product;
+
+    }
 .section {
     color:#fff!important;
     background-color:#000!important;
     padding:0.01em 16px;
     position:relative;
+    }
+.small {
+    background: inherit;
+    grid-area: s;
     }
 .tabs {
     position:fixed;
@@ -111,6 +154,9 @@ h5 {
     top:0;
     width:100%;
     z-index:1;
+    }
+ul {
+    width: 100%;
     }
 .zoom {
     animation:animatezoom 0.6s;
@@ -121,6 +167,7 @@ h5 {
     padding:0;
     width:600px;
     }
+
 
 
 
@@ -145,7 +192,7 @@ bar:after {
         }
     }
 .w3-padding {
-    padding:8px;
+    padding: 1;
     }
 .w3-black,.w3-hover-black:hover {
     color:#fff!important;
